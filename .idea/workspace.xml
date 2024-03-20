@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db894c44-0c22-4b3d-b91c-59f6aa758a3e" name="Changes" comment="new self added" />
+    <list default="true" id="db894c44-0c22-4b3d-b91c-59f6aa758a3e" name="Changes" comment="new self added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PriorityQueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/PriorityQueue.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +85,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710931806778</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new self added">
+      <option name="closed" value="true" />
+      <created>1710932184531</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710932184531</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new self added">
+      <option name="closed" value="true" />
+      <created>1710932233075</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710932233075</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
