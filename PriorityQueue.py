@@ -27,16 +27,15 @@ class Entry:
         return f"Priority:{self._priority}; Value:{self._value}"
 
 
-class PQ(Entry):
-    def __init__(self, priority, value):
-        super(PQ, self).__init__(priority, value)
-        entries = [Entry(priority, value)]  # list literal
+class PQ:
+    def __init__(self):
+        self._entries = []
 
-    def remove_min(self, entries):
-        pass
+    def add(self, priority, value):
+        entry = Entry(priority, value)
+        self._entries.append(entry)
 
 
 if __name__ == "__main__":
-
-    food = Entry(4, "EAT")
-    print(food.__str__())
+    pq = PQ()
+    pq.add(2, "Eat")
