@@ -38,7 +38,7 @@ class PQ:
 
     def remove_min(self):
         if not self._entries:
-            return false
+            return False
         else:
             min_entry = min(self._entries, key=lambda entry: entry.get_priority())
             self._entries.remove(min_entry)
