@@ -14,8 +14,8 @@ class Entry:
         self._priority = priority
         self._value = value
 
-    def set_priority(self):
-        return self._priority
+    def set_priority(self, priority):
+        self._priority = priority
 
     def get_priority(self):
         return self._priority
@@ -54,22 +54,15 @@ class PQ:
         return len(self._entries)
 
 
-if __name__ == "__main__":
-    pq = PQ()
+pq = PQ()
 
-    pq.add(2, "Eat")
-    pq.add(0, "Study for CS 3035")
-    pq.add(3, "Sleep")
-    pq.add(1, "Maintain Personal Relationships")
-    pq.add(4, "Practice Good Personal Hygiene")
-    pq.set_priority("Practice Good Personal Hygiene", 2)
-    pq.set_priority("Eat", 4)
+pq.add(2, "Eat")
+pq.add(0, "Study for CS 3035")
+pq.add(3, "Sleep")
+pq.add(1, "Maintain Personal Relationships")
+pq.add(4, "Practice Good Personal Hygiene")
+pq.set_priority("Practice Good Personal Hygiene", 2)
+pq.set_priority("Eat", 4)
 
-    #while pq.size() > 0:
-        #print(pq.remove_min())
-
-    for entry in pq._entries:
-        print(entry.get_priority(), entry.get_value())
-
-
-
+while pq.size() > 0:
+    print(pq.remove_min())

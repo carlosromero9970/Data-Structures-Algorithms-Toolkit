@@ -1,0 +1,54 @@
+Index: PriorityQueue.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\r\nCarlos Romero\r\n\r\nCS 3035-05(13119)\r\n\r\nExercise: Implement a Priority Queue in Python\r\n\r\nDue on the 26th of March\r\n\"\"\"\r\n\r\n\r\nclass Entry:\r\n    def __init__(self, priority, value):\r\n        self._priority = priority\r\n        self._value = value\r\n\r\n    def set_priority(self):\r\n        return self._priority\r\n\r\n    def get_priority(self):\r\n        return self._priority\r\n\r\n    def get_value(self):\r\n        return self._value\r\n\r\n    # dunder\r\n    def __str__(self):\r\n        return f\"Priority:{self._priority}; Value:{self._value}\"\r\n\r\n\r\nclass PQ:\r\n    def __init__(self):\r\n        self._entries = []\r\n\r\n    def add(self, priority, value):\r\n        entry = Entry(priority, value)\r\n        self._entries.append(entry)\r\n\r\n    def remove_min(self):\r\n        if not self._entries:\r\n            return false\r\n        else:\r\n            min_entry = min(self._entries, key=lambda entry: entry.get_priority())\r\n            self._entries.remove(min_entry)\r\n            return min_entry\r\n\r\n    def set_priority(self, newPriority, value):\r\n        for entry in self._entries:\r\n            if entry.get_value == value:\r\n                entry.set_priority(newPriority)\r\n        self._entries.sort(key=lambda entry: entry.get_priority())\r\n\r\n    def size(self):\r\n        return len(self._entries)\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    pq = PQ()\r\n\r\n    pq.add(2, \"Eat\")\r\n    pq.add(0, \"Study for CS 3035\")\r\n    pq.add(3, \"Sleep\")\r\n    pq.add(1, \"Maintain Personal Relationships\")\r\n    pq.add(4, \"Practice Good Personal Hygiene\")\r\n    pq.set_priority(\"Practice Good Personal Hygiene\", 2)\r\n    pq.set_priority(\"Eat\", 4)\r\n\r\n    #while pq.size() > 0:\r\n        #print(pq.remove_min())\r\n\r\n    for entry in pq._entries:\r\n        print(entry.get_priority(), entry.get_value())\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PriorityQueue.py b/PriorityQueue.py
+--- a/PriorityQueue.py	
++++ b/PriorityQueue.py	
+@@ -14,8 +14,8 @@
+         self._priority = priority
+         self._value = value
+ 
+-    def set_priority(self):
+-        return self._priority
++    def set_priority(self, priority):
++        self._priority = priority
+ 
+     def get_priority(self):
+         return self._priority
+@@ -54,22 +54,15 @@
+         return len(self._entries)
+ 
+ 
+-if __name__ == "__main__":
+-    pq = PQ()
++pq = PQ()
+ 
+-    pq.add(2, "Eat")
+-    pq.add(0, "Study for CS 3035")
+-    pq.add(3, "Sleep")
+-    pq.add(1, "Maintain Personal Relationships")
+-    pq.add(4, "Practice Good Personal Hygiene")
+-    pq.set_priority("Practice Good Personal Hygiene", 2)
+-    pq.set_priority("Eat", 4)
++pq.add(2, "Eat")
++pq.add(0, "Study for CS 3035")
++pq.add(3, "Sleep")
++pq.add(1, "Maintain Personal Relationships")
++pq.add(4, "Practice Good Personal Hygiene")
++pq.set_priority("Practice Good Personal Hygiene", 2)
++pq.set_priority("Eat", 4)
+ 
+-    #while pq.size() > 0:
+-        #print(pq.remove_min())
+-
+-    for entry in pq._entries:
+-        print(entry.get_priority(), entry.get_value())
+-
+-
+-
++while pq.size() > 0:
++    print(pq.remove_min())
