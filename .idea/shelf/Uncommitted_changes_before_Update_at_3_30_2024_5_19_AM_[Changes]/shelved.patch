@@ -1,0 +1,168 @@
+Index: Recursion.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\r\nCarlos Romero\r\n\r\nCS 3035-05(13119)\r\n\r\nExercise: Python Recursion\r\n\r\nDue on the 28th of March\r\n\"\"\"\r\nimport sys\r\n\r\n\r\ndef count(string):\r\n    \"\"\"\r\n    string: carlos\r\n\r\n    = 1 + count(\"arlos\")\r\n    = 1 + (1 + count(\"rlos\"))\r\n    = 1 + (1 + (1 + count(\"los\")))\r\n    = 1 + (1 + (1 + (1 + count(\"os\"))))\r\n    = 1 + (1 + (1 + (1 + (1 + count(\"s\")))))\r\n    = 1 + (1 + (1 + (1 + (1 + (1 + count(\"\"))))))\r\n    = 1 + (1 + (1 + (1 + (1 + (1 + 0)))))\r\n    = 1 + (1 + (1 + (1 + (1 + 1))))\r\n    = 1 + (1 + (1 + (1 + 2)))\r\n    = 1 + (1 + (1 + 3))\r\n    = 1 + (1 + 4)\r\n    = 1 + 5\r\n    = 6\r\n    \"\"\"\r\n\r\n    if not string:\r\n        # checking if the length of the string is zero meaning if no string exists\r\n        return 0\r\n    return 1 + count(string[1:])\r\n\r\n\r\ndef reverse(string):\r\n    \"\"\"\r\n    string: carlos\r\n\r\n    = s + reverse(\"carlo\")\r\n    = s + (o + reverse(\"carl\"))\r\n    = s + (o + (l + reverse(\"car\")))\r\n\r\n    and so on...\r\n\r\n    = solrac\r\n    \"\"\"\r\n\r\n    if not string:\r\n        # an empty string is the same in reversed order\r\n        return \"\"\r\n    return string[-1] + reverse(string[:-1])\r\n\r\n\r\ndef palindrome(string):\r\n    \"\"\"\r\n    string = \"abaaba\"\r\n\r\n    half = 3      since the len() gives us 6\r\n\r\n    string[:half] = string[:3]  starts at index zero stops on the index before half(3)\r\n    string[half:] = string[3:]  starts on in the index of 3 with the rest of the following string\r\n\r\n    \"\"\"\r\n    half = int(len(string) / 2)\r\n    first_half = string[:half]\r\n    second_half = string[half:]\r\n\r\n\r\n\r\n\r\n\r\ndef run_count_reverse():\r\n    user_input = input(\"Enter a string: \")\r\n    result = count(user_input)\r\n    resultReverse = reverse(user_input)\r\n    print(\"\")\r\n    print(f\"The length of the string is: {result}\")\r\n    print(f\"The reverse of the string is: {resultReverse}\")\r\n    # print(user_input[-1])\r\n    # print(user_input[:-1])\r\n\r\nrun_count_reverse()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Recursion.py b/Recursion.py
+--- a/Recursion.py	(revision 9c0348c9d45e4c400b6768823f4b5fce25eae8ad)
++++ b/Recursion.py	(date 1711704655358)
+@@ -55,22 +55,7 @@
+ 
+ 
+ def palindrome(string):
+-    """
+-    string = "abaaba"
+-
+-    half = 3      since the len() gives us 6
+-
+-    string[:half] = string[:3]  starts at index zero stops on the index before half(3)
+-    string[half:] = string[3:]  starts on in the index of 3 with the rest of the following string
+-
+-    """
+-    half = int(len(string) / 2)
+-    first_half = string[:half]
+-    second_half = string[half:]
+-
+-
+-
+-
++    new_string = "".join()
+ 
+ def run_count_reverse():
+     user_input = input("Enter a string: ")
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"db894c44-0c22-4b3d-b91c-59f6aa758a3e\" name=\"Changes\" comment=\"new PQ  class added\">\r\n      <change afterPath=\"$PROJECT_DIR$/Recursion.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2dwtWnaqd3EuPLkia6jBYummPfY\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Python.PriorityQueue.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.Recursion.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [\r\n      &quot;Python&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"PriorityQueue\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"ProgrammingParadigmsCS\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/PriorityQueue.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"db894c44-0c22-4b3d-b91c-59f6aa758a3e\" name=\"Changes\" comment=\"\" />\r\n      <created>1710931003143</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1710931003143</updated>\r\n      <workItem from=\"1711142761685\" duration=\"6930000\" />\r\n      <workItem from=\"1711153937294\" duration=\"945000\" />\r\n      <workItem from=\"1711225222701\" duration=\"8130000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"new class added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710931493434</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710931493434</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"new class added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710931539867</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710931539867</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"new self added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710931806778</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710931806778</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"new self added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710932184531</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710932184531</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"new self added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710932233075</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710932233075</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"new self added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710932260714</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710932260714</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"new PQ  class added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711154838843</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711154838843</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"new PQ  class added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711154848867</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711154848867</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"new PQ  class added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711584460276</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711584460276</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"new class added\" />\r\n    <MESSAGE value=\"new self added\" />\r\n    <MESSAGE value=\"new PQ  class added\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"new PQ  class added\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/ProgrammingParadigmsCS$PriorityQueue.coverage\" NAME=\"PriorityQueue Coverage Results\" MODIFIED=\"1711237109547\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"true\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9c0348c9d45e4c400b6768823f4b5fce25eae8ad)
++++ b/.idea/workspace.xml	(date 1711801189104)
+@@ -4,9 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="db894c44-0c22-4b3d-b91c-59f6aa758a3e" name="Changes" comment="new PQ  class added">
+-      <change afterPath="$PROJECT_DIR$/Recursion.py" afterDir="false" />
++    <list default="true" id="db894c44-0c22-4b3d-b91c-59f6aa758a3e" name="Changes" comment="new recursion program">
++      <change afterPath="$PROJECT_DIR$/BinarySearch.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/PriorityQueue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/PriorityQueue.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Recursion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recursion.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -35,27 +37,28 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Python.PriorityQueue.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.Recursion.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Python.BinarySearch.executor": "Run",
++    "Python.PriorityQueue.executor": "Run",
++    "Python.Recursion.executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "master",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable",
++    "vue.rearranger.settings.migration": "true"
+   },
+-  &quot;keyToStringList&quot;: {
+-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+-      &quot;Python&quot;
++  "keyToStringList": {
++    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
++      "Python"
+     ]
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager">
+     <configuration name="PriorityQueue" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+       <module name="ProgrammingParadigmsCS" />
+@@ -172,7 +175,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1711584460276</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="new recursion program">
++      <option name="closed" value="true" />
++      <created>1711625374593</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1711625374593</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -182,7 +193,8 @@
+     <MESSAGE value="new class added" />
+     <MESSAGE value="new self added" />
+     <MESSAGE value="new PQ  class added" />
+-    <option name="LAST_COMMIT_MESSAGE" value="new PQ  class added" />
++    <MESSAGE value="new recursion program" />
++    <option name="LAST_COMMIT_MESSAGE" value="new recursion program" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/ProgrammingParadigmsCS$PriorityQueue.coverage" NAME="PriorityQueue Coverage Results" MODIFIED="1711237109547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+Index: .idea/runConfigurations/PriorityQueue.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"ProjectRunConfigurationManager\">\r\n  <configuration default=\"false\" name=\"PriorityQueue\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n    <module name=\"ProgrammingParadigmsCS\" />\r\n    <option name=\"ENV_FILES\" value=\"\" />\r\n    <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n    <option name=\"PARENT_ENVS\" value=\"true\" />\r\n    <envs>\r\n      <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n    </envs>\r\n    <option name=\"SDK_HOME\" value=\"\" />\r\n    <option name=\"SDK_NAME\" value=\"Python 3.12\" />\r\n    <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n    <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n    <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n    <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n    <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/PriorityQueue.py\" />\r\n    <option name=\"PARAMETERS\" value=\"\" />\r\n    <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n    <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n    <option name=\"MODULE_MODE\" value=\"false\" />\r\n    <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n    <option name=\"INPUT_FILE\" value=\"\" />\r\n    <method v=\"2\" />\r\n  </configuration>\r\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations/PriorityQueue.xml b/.idea/runConfigurations/PriorityQueue.xml
+--- a/.idea/runConfigurations/PriorityQueue.xml	(revision 9c0348c9d45e4c400b6768823f4b5fce25eae8ad)
++++ b/.idea/runConfigurations/PriorityQueue.xml	(date 1711651328756)
+@@ -8,9 +8,8 @@
+       <env name="PYTHONUNBUFFERED" value="1" />
+     </envs>
+     <option name="SDK_HOME" value="" />
+-    <option name="SDK_NAME" value="Python 3.12" />
+     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+-    <option name="IS_MODULE_SDK" value="false" />
++    <option name="IS_MODULE_SDK" value="true" />
+     <option name="ADD_CONTENT_ROOTS" value="true" />
+     <option name="ADD_SOURCE_ROOTS" value="true" />
+     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+Index: BinarySearch.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BinarySearch.py b/BinarySearch.py
+new file mode 100644
+--- /dev/null	(date 1711800943569)
++++ b/BinarySearch.py	(date 1711800943569)
+@@ -0,0 +1,5 @@
++print(11/3)
++print(11//3)
++
++print(15/7)
++print(15//7)
