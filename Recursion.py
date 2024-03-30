@@ -7,6 +7,7 @@ Exercise: Python Recursion
 
 Due on the 28th of March
 """
+<<<<<<< HEAD
 import sys
 
 
@@ -29,6 +30,11 @@ def count(string):
     = 6
     """
 
+=======
+
+
+def count(string):
+>>>>>>> origin/master
     if not string:
         # checking if the length of the string is zero meaning if no string exists
         return 0
@@ -36,6 +42,7 @@ def count(string):
 
 
 def reverse(string):
+<<<<<<< HEAD
     """
     string: carlos
 
@@ -48,6 +55,8 @@ def reverse(string):
     = solrac
     """
 
+=======
+>>>>>>> origin/master
     if not string:
         # an empty string is the same in reversed order
         return ""
@@ -72,6 +81,7 @@ def palindrome(string):
 def run_count_reverse():
     user_input = input("Enter a string: ")
     result = count(user_input)
+<<<<<<< HEAD
     resultReverse = reverse(user_input)
     result_palindrome = palindrome(user_input)
 
@@ -80,4 +90,14 @@ def run_count_reverse():
     print(f"The reverse of the string is: {resultReverse}")
     print(f"The palindrome of the string is: {result_palindrome}")
 
+=======
+    result_reverse = reverse(user_input)
+    result_palindrome = palindrome(user_input)
+    print("")
+    print(f"The length of the string is: {result}")
+    print(f"The reverse of the string is: {result_reverse}")
+    print(f"The palindrome of the string is: {result_palindrome}")
+
+
+>>>>>>> origin/master
 run_count_reverse()
