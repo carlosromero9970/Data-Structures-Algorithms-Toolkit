@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db894c44-0c22-4b3d-b91c-59f6aa758a3e" name="Changes" comment="finished recursion">
-      <change afterPath="$PROJECT_DIR$/mergesort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/implementQueue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/peep/queuelinkedlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2024_6_26_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2024_6_26_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2024_6_26_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2024_6_26_PM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mergesort.py" beforeDir="false" afterPath="$PROJECT_DIR$/mergesort.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,20 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "carlosromero9970"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="a114bba8-6519-4c5a-ae5f-3473f634581d" />
-        <option name="url" value="https://github.com/carlosromero9970/ProgrammingParadigmsCS.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -55,10 +46,10 @@
     "Python.PriorityQueue.executor": "Run",
     "Python.Recursion.executor": "Run",
     "Python.mergesort.executor": "Run",
-    "Python.pancake.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/pizza/PycharmProjects/ProgrammingParadigmsCS/peep",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +64,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pizza\PycharmProjects\ProgrammingParadigmsCS\peep" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="PriorityQueue" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="ProgrammingParadigmsCS" />
@@ -118,6 +114,14 @@
       <workItem from="1711225222701" duration="8130000" />
       <workItem from="1712348520374" duration="15000" />
       <workItem from="1712839432129" duration="5781000" />
+      <workItem from="1712977934129" duration="807000" />
+      <workItem from="1713290252065" duration="88000" />
+      <workItem from="1713303948753" duration="76000" />
+      <workItem from="1713304176153" duration="362000" />
+      <workItem from="1713318183333" duration="10000" />
+      <workItem from="1713649122480" duration="611000" />
+      <workItem from="1714007452602" duration="1493000" />
+      <workItem from="1714155646774" duration="14242000" />
     </task>
     <task id="LOCAL-00001" summary="new class added">
       <option name="closed" value="true" />
@@ -199,23 +203,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711833291333</updated>
     </task>
-    <task id="LOCAL-00011" summary="finished recursion">
-      <option name="closed" value="true" />
-      <created>1712909339643</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1712909339643</updated>
-    </task>
-    <task id="LOCAL-00012" summary="finished recursion">
-      <option name="closed" value="true" />
-      <created>1712909344106</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1712909344106</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +234,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="finished recursion" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProgrammingParadigmsCS$mergesort.coverage" NAME="mergesort Coverage Results" MODIFIED="1712978526637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProgrammingParadigmsCS$PriorityQueue.coverage" NAME="PriorityQueue Coverage Results" MODIFIED="1711237109547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProgrammingParadigmsCS$BinarySearch.coverage" NAME="BinarySearch Coverage Results" MODIFIED="1711836838334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
