@@ -6,6 +6,8 @@ Homework 4: Implement Queue ADT in Python
 April 26, 2024
 """
 
+from abc import ABC, abstractmethod
+
 
 class SinglyLinkedListNode:
     def __init__(self, data):
@@ -19,7 +21,7 @@ class SinglyLinkedListNode:
         self._data = data
 
     def get_next_ptr(self):
-        return self
+        return self._next_ptr
 
     def set_next_ptr(self, next_ptr):
         self._next_ptr = next_ptr
@@ -34,6 +36,7 @@ class SinglyLinkedList:
         self._tail = None
         self._size = 0
 
+    # getters
     def get_head(self):
         return self._head
 
@@ -50,11 +53,10 @@ class SinglyLinkedList:
         if self._head is None:
             self._head = new_node
             self._tail = new_node
-        # checks if head already exists
+        # creating our new node in the beginning of the list
         else:
-            temp = self._head
+            new_node.set_next_ptr(self._head)
             self._head = new_node
-            self._head.set_next_ptr(temp)
 
         self._size += 1
 
@@ -65,15 +67,13 @@ class SinglyLinkedList:
         if self._head is None:
             self._head = new_node
             self._tail = new_node
-
         else:
-            temp = self._tail
+            self._tail.set_next_ptr(new_node)
             self._tail = new_node
-            self._tail.set_next_ptr(temp)
 
         self._size += 1
 
-    def remove_at_beginning_of_list(self, data):
+    def remove_at_beginning_of_list(self):
         if self._head is None:
             return
         # if list size is only 1
@@ -116,4 +116,83 @@ class SinglyLinkedList:
     def __len__(self):
         return self._size
 
+    def print_list(self):
+        list = []
+        current = self._head
+        while current is not None:
+            list.append(str(current.get_data()))
+            current = current.get_next_ptr()
+        return list
+
+
+# AbstractQueue: Python abstract classes inherit from the class ABC. Here is an abstract queue class.
+class AbstractQueue(ABC):
+    # add to the back of the queue
+    @abstractmethod
+    def offer(self, obj):
+        pass
+
+    # remove from the front of the queue and return a reference to the object removed
+    @abstractmethod
+    def poll(self):
+        pass
+
+    # just return a reference to the object at the front without removing it from the queue
+    @abstractmethod
+    def peek(self):
+        pass
+
+    # returns the size of the list
+    @abstractmethod
+    def __len__(self):
+        pass
+
+
+# PythonListQueue: AbstractQueue implemented with an underlying Python list
+class PythonListQueue(AbstractQueue):
+    def __init__(self):
+        self._list = []
+
+    def offer(self, obj):
+        self._list.append(obj)
+
+    def poll(self):
+        return self._list.pop(0)
+
+    def peek(self):
+        return self._list[0]
+
+    def __len__(self):
+        return len(self._list)
+
+
+# SLLQueue: AbstractQueue implemented with an underlying pythin list being our linked list
+class SLLQueue(AbstractQueue):
+    def __init__(self):
+        self._list = SinglyLinkedList()
+
+    def offer(self, obj):
+        self._list.add_at_end_of_list(obj)
+
+    def poll(self):
+        return self._list.remove_at_beginning_of_list()
+
+    def peek(self):
+        return self._list.get_head()
+
+    def __len__(self):
+        return self._list.get_size()
+
+
+# Not done
+class Main:
+    my_list = SinglyLinkedList()
+
+    my_list.add_at_beginning_of_list(5)
+    my_list.add_at_end_of_list(10)
+    my_list.add_at_beginning_of_list(15)
+    my_list.add_at_end_of_list(20)
+    my_list.add_at_beginning_of_list(20)
+
+    print(my_list.print_list())
 
