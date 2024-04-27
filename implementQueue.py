@@ -156,7 +156,11 @@ class PythonListQueue(AbstractQueue):
         self._list.append(obj)
 
     def poll(self):
-        return self._list.pop(0)
+        #return self._list.pop(0)
+        if len(self._list) == 0:
+            return None
+        else:
+            return self._list.pop(0)
 
     def peek(self):
         return self._list[0]
@@ -174,7 +178,10 @@ class SLLQueue(AbstractQueue):
         self._list.add_at_end_of_list(obj)
 
     def poll(self):
-        return self._list.remove_at_beginning_of_list()
+        if len(self._list) == 0:
+            return None
+        else:
+            return self._list.remove_at_beginning_of_list()
 
     def peek(self):
         return self._list.get_head()
@@ -193,6 +200,7 @@ class Main:
     my_list.add_at_end_of_list(20)
     my_list.add_at_beginning_of_list(20)
 
+    print("My Singly Linked List:")
     print(my_list.print_list())
     print()
 
@@ -200,16 +208,44 @@ class Main:
     print("MY PYTHON LIST QUEUE")
     my_list_1 = PythonListQueue()
 
+    # putting into out queue
     my_list_1.offer(24)
     my_list_1.offer(2)
     my_list_1.offer(3)
     my_list_1.offer(4)
+    my_list_1.offer(5)
 
     print("The length of my list in the PythonListQueue is "+str(my_list_1.__len__()))
-    print("Our peek "+str(my_list_1.peek())+" since this is the first one that was put in the queue")
-
+    print("Our peek is the number "+str(my_list_1.peek())+" since this is the first one that was put in the queue")
     print()
 
+    print("Remove from the front of the queue and return a reference to the object removed")
+    i = 0
+    size = my_list_1.__len__()
+    while i < size:
+        print(str(my_list_1.poll()))
+        i += 1
+    print()
+
+    # Testing my SLLQueue
+    print("MY SLLQUEUE")
+    my_list_2 = SLLQueue()
+
+    my_list_2.offer(8)
+    my_list_2.offer(6)
+    my_list_2.offer(4)
+
+    print("The length of my list in the PythonListQueue is "+str(my_list_2.__len__()))
+    print("Our peek is the number "+str(my_list_2.poll())+" since this is the first one that was put in the queue")
+    print()
+
+    # print("Remove from the front of the queue and return a reference to the object removed")
+    # ii = 0
+    # other_size = my_list_2.__len__()
+    # while ii < other_size:
+    #     print(str(my_list_2.poll()))
+    #     ii += 1
+    # print()
 
 
 
