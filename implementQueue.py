@@ -5,7 +5,6 @@ Homework 4: Implement Queue ADT in Python
 
 April 26, 2024
 """
-
 from abc import ABC, abstractmethod
 
 
@@ -195,4 +194,22 @@ class Main:
     my_list.add_at_beginning_of_list(20)
 
     print(my_list.print_list())
+    print()
+
+    # Testing my PythonListQueue
+    print("MY PYTHON LIST QUEUE")
+    my_list_1 = PythonListQueue()
+
+    my_list_1.offer(24)
+    my_list_1.offer(2)
+    my_list_1.offer(3)
+    my_list_1.offer(4)
+
+    print("The length of my list in the PythonListQueue is "+str(my_list_1.__len__()))
+    print("Our peek "+str(my_list_1.peek())+" since this is the first one that was put in the queue")
+
+    print()
+
+
+
 
