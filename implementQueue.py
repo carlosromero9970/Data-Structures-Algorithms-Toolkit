@@ -117,12 +117,3 @@ class SinglyLinkedList:
         return self._size
 
 
-
-
-
-
-
-
-
-
-
